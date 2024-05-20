@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('konsumen', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->string('nama_konsumen');
-            $table->string('no_telp');
+            $table->string('nama_konsumen')->nullable();
+            $table->string('no_telp')->nullable();
             $table->timestamps();
         });
     }

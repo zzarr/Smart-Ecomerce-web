@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('petani', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
-            $table->string('nama_petani');
-            $table->text('alamat');
-            $table->string('no_telp');
+            $table->string('nama_petani')->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('no_telp')->nullable();
             $table->timestamps();
         });
     }
