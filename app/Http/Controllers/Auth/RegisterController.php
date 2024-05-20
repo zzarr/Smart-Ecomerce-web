@@ -46,26 +46,18 @@ class RegisterController extends Controller
             'role' => $request->role, // Simpan role
         ]);
 
+        // Tambahkan data spesifik berdasarkan role
         if ($request->role == 'petani') {
-            $userId = DB::table('users')
-                ->where('email', $request->email)
-                ->value('id');
-
             DB::table('petani')->insert([
-                'user_id' => $userId,
+                'user_id' => $user->id,
             ]);
         }
 
         if ($request->role == 'konsumen') {
-            $userId = DB::table('users')
-                ->where('email', $request->email)
-                ->value('id');
-
             DB::table('konsumen')->insert([
-                'user_id' => $userId,
+                'user_id' => $user->id,
             ]);
         }
-
 
         // Autentikasi pengguna baru
         Auth::login($user);
