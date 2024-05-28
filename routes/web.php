@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Petani\DashboardPetaniController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,9 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
-})->name('user');
+});
 
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
@@ -26,7 +27,5 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 Route::post('register', [RegisterController::class, 'register']);
 
 Route::group(['middleware' => ['role:petani']], function () {
-    route::get('/dashboard', function () {
-        return view('petani.dashboard.dashboard');
-    });
+    route::get('/dashboard', [DashboardPetaniController::class, 'index'])->name('dashboard_petani');
 });
