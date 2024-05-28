@@ -15,10 +15,6 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/home', function () {
     return view('home');
 })->name('user');
@@ -30,7 +26,7 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 Route::post('register', [RegisterController::class, 'register']);
 
 Route::group(['middleware' => ['role:petani']], function () {
-    route::get('/dashboard',function(){
+    route::get('/dashboard', function () {
         return view('petani.dashboard.dashboard');
     });
 });
