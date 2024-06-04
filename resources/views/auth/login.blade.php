@@ -9,7 +9,8 @@
                                 src="{{ asset('images/logo/SHOPAN.png') }}" alt="logo"></a></div>
                     <h2 class="auth-heading text-center mb-5">Log in to SHOOPAN</h2>
                     <div class="auth-form-container text-start">
-                        <form class="auth-form login-form">
+                        <form class="auth-form login-form" method="POST" action="{{ route('proses') }}">
+                            @csrf
                             <div class="email mb-3">
                                 <label class="sr-only" for="signin-email">Email</label>
                                 <input id="signin-email" name="signin-email" type="email"

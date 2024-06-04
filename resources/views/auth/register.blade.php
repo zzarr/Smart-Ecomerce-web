@@ -46,10 +46,10 @@
                             </div>
                             <div class="role mb-3">
                                 <label for="role">Daftar Sebagai?</label>
-                                <select class="form-select" id="role" name="role" aria-label="Daftar sebagai?"
+                                <select class="form-select" id="role" name="p" aria-label="Daftar sebagai?"
                                     required>
-                                    <option value="petani" {{ old('role') == 'petani' ? 'selected' : '' }}>Petani</option>
-                                    <option value="konsumen" {{ old('role') == 'konsumen' ? 'selected' : '' }}>Konsumen
+                                    <option value="petani">Petani</option>
+                                    <option value="konsumen">Konsumen
                                     </option>
                                 </select>
                                 @if ($errors->has('role'))

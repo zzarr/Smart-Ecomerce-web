@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
+use Illuminate\View\View;
 
 class LoginController extends Controller
 {
@@ -27,6 +30,7 @@ class LoginController extends Controller
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      * @throws \Illuminate\Validation\ValidationException
      */
+
     public function login(Request $request)
     {
         $this->validateLogin($request);
@@ -74,7 +78,7 @@ class LoginController extends Controller
     {
         return Auth::attempt(
             $this->credentials($request),
-            $request->filled('remember')
+
         );
     }
 
@@ -113,7 +117,7 @@ class LoginController extends Controller
      */
     protected function sendFailedLoginResponse(Request $request)
     {
-        throw ValidationException::withMessages([
+        throw \Illuminate\Validation\ValidationException::withMessages([
             'email' => [trans('auth.failed')],
         ]);
     }
@@ -132,7 +136,7 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/home');
+        return redirect('/');
     }
 
     /**
@@ -142,6 +146,6 @@ class LoginController extends Controller
      */
     public function redirectPath()
     {
-        return '/home';
+        return '/';
     }
 }

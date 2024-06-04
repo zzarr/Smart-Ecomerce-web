@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
-use App\Models\User;
+use App\Http\Controllers\Auth\LoginController;
+use App\Models\Users;
 
 class RegisterController extends Controller
 {
@@ -35,32 +36,36 @@ class RegisterController extends Controller
             'username' => 'required|string|max:255|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
-            'role' => 'required|in:petani,konsumen', // Validasi role
+            'p' => 'required|in:petani,konsumen', // Validasi role
         ]);
 
         // Buat pengguna baru
-        $user = User::create([
+        $user = Users::create([
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'role' => $request->role, // Simpan role
+            'role' => $request->p,
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
+
         // Tambahkan data spesifik berdasarkan role
-        if ($request->role == 'petani') {
+        if ($request->p == 'petani') {
             DB::table('petani')->insert([
-                'user_id' => $user->id,
+                'user_id' => $user['id'],
             ]);
         }
 
-        if ($request->role == 'konsumen') {
+        if ($request->p == 'konsumen') {
             DB::table('konsumen')->insert([
-                'user_id' => $user->id,
+                'user_id' => $user['id'],
             ]);
         }
 
         // Autentikasi pengguna baru
         Auth::login($user);
+
 
         // Redirect ke halaman dashboard
         return redirect()->intended('dashboard');

@@ -21,17 +21,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <a class="navbar-brand" href="#"><img src="{{ asset('images/logo/SHOPAN.png') }}"
-                            alt="" width="40" height="40"></a>
+                            alt="" width="58" height="58"></a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i
+                            <a class="nav-link active fs-5" aria-current="page" href="#"><i
                                     class="bi bi-house"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link fs-5" href="#">Link</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link fs-5" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
