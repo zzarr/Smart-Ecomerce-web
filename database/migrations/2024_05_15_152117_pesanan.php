@@ -18,7 +18,6 @@ return new class extends Migration
             $table->integer('jumlah');
             $table->decimal('total_harga', 10, 2);
             $table->timestamp('tanggal_pesanan')->useCurrent();
-            $table->text('bukti_bayar')->nullable();
             $table->enum('status', ['pending', 'diproses', 'dikirim', 'selesai'])->default('pending');
             $table->timestamps();
         });

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->string('nama_konsumen')->nullable();
             $table->string('no_telp')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('photo_type')->nullable();
             $table->timestamps();
         });
     }

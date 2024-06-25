@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('nama_petani')->nullable();
             $table->text('alamat')->nullable();
             $table->string('no_telp')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('photo_type')->nullable();
             $table->timestamps();
         });
     }

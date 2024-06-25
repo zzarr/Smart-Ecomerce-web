@@ -18,8 +18,12 @@ use \Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    $data = DB::table('users')->get();
-    return view('home', compact('data'));
+    return redirect('/home');
+});
+
+Route::get('/home', function () {
+
+    return view('home',);
 });
 
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');

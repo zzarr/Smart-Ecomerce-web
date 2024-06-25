@@ -13,12 +13,12 @@
                             @csrf
                             <div class="email mb-3">
                                 <label class="sr-only" for="signin-email">Email</label>
-                                <input id="signin-email" name="signin-email" type="email"
-                                    class="form-control signin-email" placeholder="Email address" required="required">
+                                <input id="signin-email" name="email" type="email" class="form-control signin-email"
+                                    placeholder="Email address" required="required">
                             </div><!--//form-group-->
                             <div class="password mb-3">
                                 <label class="sr-only" for="signin-password">Password</label>
-                                <input id="signin-password" name="signin-password" type="password"
+                                <input id="signin-password" name="password" type="password"
                                     class="form-control signin-password" placeholder="Password" required="required">
                                 <div class="extra mt-3 row justify-content-between">
                                     <div class="col-6">
