@@ -21,13 +21,26 @@
     <title>{{ $title ?? 'Home' }}</title>
 </head>
 
-<body>
+<body id="body m-0 p-0">
     @include('layout\navbar')
-    <div class="container-fluid">
+    <div class="page-wrapperm px-0">
+        <div class="page-content-tabm m-0">
+            <div class="container-fluid">
 
-        @yield('content')
+                @yield('content')
+
+            </div>
+        </div>
+    </div>
+
+
 
     </div>
+
+
+
+
+
     @include('layout\footer')
     @include('layout\scripts')
 

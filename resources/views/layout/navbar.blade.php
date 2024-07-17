@@ -6,14 +6,14 @@
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 link-body-emphasis">produck</a></li>
+                <li><a href="/home" class="nav-link px-2 link-secondary"><i class="ti ti-home"></i> Home</a></li>
+                <li><a href="{{ route('produk') }}" class="nav-link px-2 link-body-emphasis"><i
+                            class="ti ti-package"></i>
+                        Hasil Tani</a></li>
 
             </ul>
 
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
+
 
             <div class="dropdown text-end d-flex align-items-center">
                 @auth
@@ -42,8 +42,8 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href=""><i
-                                        class="ti ti-user font-16 me-1 align-text-bottom"></i> Profile</a>
+                                <a class="dropdown-item" href="{{ route('dashboard_petani') }}">
+                                    Dashboard</a>
                                 <a class="dropdown-item" href=""><i
                                         class="fas fa-address-book font-16 me-1 align-text-bottom"></i> Alamat Antar</a>
                                 {{-- <a class="dropdown-item" href="#"><i class="ti ti-settings font-16 me-1 align-text-bottom"></i>
@@ -60,7 +60,7 @@
                         </div>
                     </li>
                 @else
-                    <a href="{{ route('login') }}" class="nav-link link-body-emphasis">Login</a>
+                    <a href="{{ route('login') }}" class="nav-link link-body-emphasis"><i class="ti ti-user"></i>Login</a>
                 @endauth
             </div>
         </div>

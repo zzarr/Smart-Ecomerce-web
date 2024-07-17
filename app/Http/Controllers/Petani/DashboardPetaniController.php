@@ -11,6 +11,6 @@ class DashboardPetaniController extends Controller
     public function index()
     {
 
-        return view('petani.dashboard.dashboard', compact('data'));
+        return view('petani.dashboard.dashboard');
     }
 }

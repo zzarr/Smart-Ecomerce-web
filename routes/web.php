@@ -3,8 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Petani\DashboardPetaniController;
-use \Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Petani\{
+    DashboardPetaniController,
+    AkunPetniController
+};
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +26,11 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-
     return view('home',);
 });
+
+Route::get('/home/produk', [HomeController::class, 'produk'])->name('produk');
+Route::get('/home/detail', [HomeController::class, 'detail_produk'])->name('detail_produk');
 
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('proses', [LoginController::class, 'login'])->name('proses');
@@ -33,9 +39,9 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 Route::post('register', [RegisterController::class, 'register']);
 
 Route::group(['middleware' => ['role:petani']], function () {
-    route::get('/dashboard', [DashboardPetaniController::class, 'index'])->name('dashboard_petani');
+    route::get('/dashboard_petani', [DashboardPetaniController::class, 'index'])->name('dashboard_petani');
 });
 
 Route::group(['middleware' => ['role:konsumen']], function () {
-    route::get('/dashboard', [DashboardPetaniController::class, 'index'])->name('dashboard_konsumen');
+    route::get('/dashboard_konsumen', [DashboardPetaniController::class, 'index'])->name('dashboard_konsumen');
 });
