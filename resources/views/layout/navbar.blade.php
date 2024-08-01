@@ -6,9 +6,9 @@
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/home" class="nav-link px-2 link-secondary"><i class="ti ti-home"></i> Home</a></li>
+                <li><a href="/home" class="nav-link px-2 link-secondary"><i class="ti ti-home fs-5"></i> Home</a></li>
                 <li><a href="{{ route('produk') }}" class="nav-link px-2 link-body-emphasis"><i
-                            class="ti ti-package"></i>
+                            class="ti ti-package fs-5"></i>
                         Hasil Tani</a></li>
 
             </ul>

@@ -10,7 +10,7 @@ class DashboardPetaniController extends Controller
 {
     public function index()
     {
-
-        return view('petani.dashboard.dashboard');
+        $webtitle = 'Dashboard';
+        return view('petani.dashboard.dashboard', compact('webtitle'));
     }
 }
