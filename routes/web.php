@@ -31,6 +31,9 @@ Route::get('/home', function () {
 
 Route::get('/home/produk', [HomeController::class, 'produk'])->name('produk');
 Route::get('/home/detail', [HomeController::class, 'detail_produk'])->name('detail_produk');
+Route::get('/keranjang', function () {
+    return view('keranjang');
+});
 
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('proses', [LoginController::class, 'login'])->name('proses');

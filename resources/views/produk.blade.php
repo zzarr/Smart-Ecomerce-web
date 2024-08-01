@@ -39,14 +39,12 @@
                         </div>
                         <div class="col">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Cras
-                                    justo odio</li>
-                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Dapibus
-                                    ac facilisis in</li>
-                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Morbi leo
-                                    risus</li>
-                                <li class="list-group-item"><i
-                                        class="la la-angle-double-right text-info me-2"></i>Vestibulum at eros</li>
+                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Sayur
+                                </li>
+                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Buah</li>
+                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Palwija
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -59,28 +57,16 @@
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ asset('images/background/background.jpg') }}" alt=""
+                            <img src="{{ asset('images/HasilTani/kentang.jpg') }}" alt=""
                                 class="d-block mx-auto my-4 img-fluid" height="150">
                             <div class="d-flex justify-content-between align-items-center my-4">
                                 <div>
-                                    <p class="text-muted mb-2">lorem</p>
-                                    <a href="#" class="header-title">lorem</a>
+                                    <p class="text-muted mb-2">Kentang</p>
+                                    <a href="#" class="header-title">Kentang</a>
                                 </div>
                                 <div>
-                                    <h4 class="text-dark mt-0 mb-2">$49.00 <small
-                                            class="text-muted font-14"><del>$99.00</del></small></h4>
-                                    <ul class="list-inline mb-0 product-review align-self-center">
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i
-                                                class="la la-star-half-o text-warning font-16 ms-n2"></i></li>
-                                    </ul>
+                                    <h4 class="text-dark mt-0 mb-2">Rp. 10.000,00</h4>
+
                                 </div>
                             </div>
                             <div class="d-grid">
@@ -93,28 +79,16 @@
                     <div class="card">
                         <div class="card-body">
                             <!--end ribbon-->
-                            <img src="assets/images/products/04.png" alt="" class="d-block mx-auto my-4"
-                                height="150">
+                            <img src="{{ asset('images/HasilTani/cabai.jpg') }}" alt=""
+                                class="d-block mx-auto my-4 img-fluid" height="150">
                             <div class="d-flex justify-content-between align-items-center my-4">
                                 <div>
-                                    <p class="text-muted mb-2">lorem</p>
-                                    <a href="#" class="header-title">lorem</a>
+                                    <p class="text-muted mb-2">Cabai</p>
+                                    <a href="#" class="header-title">Cabai</a>
                                 </div>
                                 <div>
-                                    <h4 class="text-dark mt-0 mb-2">$9.00 <small
-                                            class="text-muted font-14"><del>$18.00</del></small></h4>
-                                    <ul class="list-inline mb-0 product-review align-self-center">
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i
-                                                class="la la-star-half-o text-warning font-16 ms-n2"></i></li>
-                                    </ul>
+                                    <h4 class="text-dark mt-0 mb-2">Rp. 40.000,00</h4>
+
                                 </div>
                             </div>
                             <div class="d-grid">
@@ -127,28 +101,16 @@
                     <div class="card">
                         <div class="card-body">
                             <!--end ribbon-->
-                            <img src="assets/images/products/03.png" alt="" class="d-block mx-auto my-4"
-                                height="150">
+                            <img src="{{ asset('images/HasilTani/wortel.jpg') }}" alt=""
+                                class="d-block mx-auto my-4 img-fluid" height="150">
                             <div class="d-flex justify-content-between align-items-center my-4">
                                 <div>
-                                    <p class="text-muted mb-2">Lorem</p>
-                                    <a href="#" class="header-title">lorem</a>
+                                    <p class="text-muted mb-2">wortel</p>
+                                    <a href="#" class="header-title">Wortel</a>
                                 </div>
                                 <div>
-                                    <h4 class="text-dark mt-0 mb-2">$39.00 <small
-                                            class="text-muted font-14"><del>$99.00</del></small></h4>
-                                    <ul class="list-inline mb-0 product-review align-self-center">
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i
-                                                class="la la-star-half-o text-warning font-16 ms-n2"></i></li>
-                                    </ul>
+                                    <h4 class="text-dark mt-0 mb-2">Rp. 22.000,00</h4>
+
                                 </div>
                             </div>
                             <div class="d-grid">
@@ -161,28 +123,16 @@
                     <div class="card">
                         <div class="card-body">
                             <!--end ribbon-->
-                            <img src="assets/images/products/02.png" alt="" class="d-block mx-auto my-4"
-                                height="150">
+                            <img src="{{ asset('images/HasilTani/jagung.jpg') }}" alt=""
+                                class="d-block mx-auto my-4 img-fluid" height="150">
                             <div class="d-flex justify-content-between align-items-center my-4">
                                 <div>
-                                    <p class="text-muted mb-2">lorem</p>
-                                    <a href="#" class="header-title">lorem
+                                    <p class="text-muted mb-2">Jagung</p>
+                                    <a href="#" class="header-title">Jangung
                                     </a>
                                 </div>
                                 <div>
-                                    <h4 class="text-dark mt-0 mb-2">$39.00 <small
-                                            class="text-muted font-14"><del>$99.00</del></small></h4>
-                                    <ul class="list-inline mb-0 product-review align-self-center">
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16"></i></li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i class="la la-star text-warning font-16 ms-n2"></i>
-                                        </li>
-                                        <li class="list-inline-item"><i
-                                                class="la la-star-half-o text-warning font-16 ms-n2"></i></li>
-                                    </ul>
+                                    <h4 class="text-dark mt-0 mb-2">Rp. 39.000,00 </h4>
                                 </div>
                             </div>
                             <div class="d-grid">
