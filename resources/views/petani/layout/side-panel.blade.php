@@ -3,8 +3,8 @@
     <div class="sidepanel-inner d-flex flex-column">
         <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
         <div class="app-branding">
-            <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg"
-                    alt="logo"><span class="logo-text">PORTAL</span></a>
+            <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="{{ asset('images/logo/SHOPAN.png') }}"
+                    alt="logo"><span class="logo-text fs-4">SHOPAN</span></a>
 
         </div><!--//app-branding-->
 
@@ -21,7 +21,7 @@
                 </li><!--//nav-item-->
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                    <a class="nav-link  {{ $webtitle === 'Kategori' ? 'active' : '' }}" href="docs.html">
+                    <a class="nav-link  {{ $webtitle === 'Kategori' ? 'active' : '' }}" href="{{ route('kategori') }}">
                         <span class="nav-icon">
                             <i class="ti ti-tag fs-4"></i>
                             </svg>
@@ -34,16 +34,15 @@
                     <a class="nav-link  {{ $webtitle === 'Garapan Tani' ? 'active' : '' }}" href="docs.html">
                         <span class="nav-icon">
                             <i class="ti ti-plant fs-4"></i>
-                            </svg>
+
                         </span>
                         <span class="nav-link-text">Garapan Tani</span>
                     </a><!--//nav-link-->
                 </li><!--//nav-item-->
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                    <a class="nav-link" href="orders.html">
-                        <span class="nav-icon">
-
+                    <a class="nav-link {{ $webtitle === 'Pesanan' ? 'active' : '' }}" href="{{ route('pesanan') }}">
+                        <span class="nav-icon ">
                             <i class="ti ti-clipboard-list fs-4"></i>
                         </span>
                         <span class="nav-link-text">pesanan</span>

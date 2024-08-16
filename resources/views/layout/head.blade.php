@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="{{ asset('metrica/css/app.min.css') }}">
 <link rel="stylesheet" href="{{ asset('metrica/css/portal.css') }}">
 <link rel="stylesheet" href="{{ asset('metrica/css/icons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('metrica/css/bootstrap.min.css') }}">
 <style>
     html,
     body {

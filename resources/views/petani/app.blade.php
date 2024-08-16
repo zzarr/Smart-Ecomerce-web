@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/js/app.js'])
     @include('layout\head')
+    @stack('css')
     <link rel="stylesheet" href="{{ asset('css/portal.css') }}">
     <title>{{ $webtitle }}</title>
 </head>
@@ -20,8 +21,9 @@
     </header><!--//app-header-->
 
     <div class="app-wrapper"> @yield('content')</div>
-    @yield('content')
+
     @include('layout\scripts')
+    @stack('js')
 </body>
 
 </html>

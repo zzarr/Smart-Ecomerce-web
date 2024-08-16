@@ -5,7 +5,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Petani\{
     DashboardPetaniController,
-    AkunPetniController
+    AkunPetniController,
+    PesananController,
+    KategoriController
 };
 use App\Http\Controllers\HomeController;
 
@@ -42,7 +44,16 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 Route::post('register', [RegisterController::class, 'register']);
 
 Route::group(['middleware' => ['role:petani']], function () {
-    route::get('/dashboard_petani', [DashboardPetaniController::class, 'index'])->name('dashboard_petani');
+    Route::prefix(('petani'))->group(function () {
+
+        Route::get('/dashboard_petani', [DashboardPetaniController::class, 'index'])->name('dashboard_petani');
+
+        Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori');
+        Route::get('/tambah_kategori', [KategoriController::class], 'add')->name('add_kategori');
+
+
+        Route::get('/pesanan', [PesananController::class, 'index'])->name('pesanan');
+    });
 });
 
 Route::group(['middleware' => ['role:konsumen']], function () {
