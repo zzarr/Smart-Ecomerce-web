@@ -18,7 +18,7 @@ class KategoriController extends Controller
 
     public function add()
     {
-        $webtitle = 'Tambah Kategori';
+        $webtitle = 'Kategori';
         return view('Petani.dashboard.kategori_add', compact('webtitle'));
     }
 }

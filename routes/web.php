@@ -49,7 +49,7 @@ Route::group(['middleware' => ['role:petani']], function () {
         Route::get('/dashboard_petani', [DashboardPetaniController::class, 'index'])->name('dashboard_petani');
 
         Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori');
-        Route::get('/tambah_kategori', [KategoriController::class], 'add')->name('add_kategori');
+        Route::get('/tambah_kategori', [KategoriController::class, 'add'])->name('add_kategori');
 
 
         Route::get('/pesanan', [PesananController::class, 'index'])->name('pesanan');

@@ -16,7 +16,7 @@
                                 <div class="app-card-body">
                                     <div class="row">
                                         <div class="col-12">
-                                            <a href="" class="btn btn-primary text-white"><i
+                                            <a href="{{ route('add_kategori') }}" class="btn btn-primary text-white"><i
                                                     class="ti ti-circle-plus"></i>Tambah
                                                 data</a>
                                         </div>

@@ -8,7 +8,7 @@
     @vite(['resources/js/app.js'])
     @include('layout\head')
     @stack('css')
-    <link rel="stylesheet" href="{{ asset('css/portal.css') }}">
+
     <title>{{ $webtitle }}</title>
 </head>
 
