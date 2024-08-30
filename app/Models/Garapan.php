@@ -16,7 +16,7 @@ class Garapan extends Model
         'nama_tanaman',
         'deskripsi',
         'harga_per_unit',
-        'tanggl_tanam',
+        'tanggal_tanam',
         'tanggal_panen',
         'status',
         'kategori_id',

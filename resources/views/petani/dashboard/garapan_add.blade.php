@@ -42,10 +42,10 @@
 
                                 <!-- Tanggal Tanam -->
                                 <div class="mb-3">
-                                    <label for="tanggl_tanam" class="form-label">Tanggal Tanam</label>
-                                    <input type="date" class="form-control" id="tanggl_tanam" name="tanggl_tanam"
-                                        value="{{ old('tanggl_tanam') }}" required>
-                                    @error('tanggl_tanam')
+                                    <label for="tanggal_tanam" class="form-label">Tanggal Tanam</label>
+                                    <input type="date" class="form-control" id="tanggal_tanam" name="tanggal_tanam"
+                                        value="{{ old('tanggal_tanam') }}" required>
+                                    @error('tanggal_tanam')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -60,22 +60,25 @@
                                     @enderror
                                 </div>
 
-                                <!-- Status -->
-                                <div class="mb-3">
-                                    <label for="status" class="form-label">Status</label>
-                                    <input type="text" class="form-control" id="status" name="status"
-                                        value="{{ old('status') }}" required>
-                                    @error('status')
-                                        <div class="text-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
+                                <!-- Status
+                                                    <div class="mb-3">
+                                                        <label for="status" class="form-label">Status</label>
+                                                        <select type="text" class="form-control" id="status" name="status"
+                                                            value="{{ old('status') }}" required>
+                                                            <option value="Belum dipesan"></option>
+                                                            <option value="Sudah dipesan">Sudah dipesan</option>
+                                                        </select>
+                                                        @error('status')
+        <div class="text-danger">{{ $message }}</div>
+    @enderror
+                                                    </div> -->
 
                                 <!-- Kategori -->
                                 <div class="mb-3">
                                     <label for="kategori" class="form-label">Kategori</label>
                                     <select name="kategori_id" id="" class="form-select">
                                         @foreach ($kategori as $item)
-                                            <option value=">{{ $item->id }}">{{ $item->nama_kategori }}</option>
+                                            <option value="{{ $item->id }}">{{ $item->nama_kategori }}</option>
                                         @endforeach
                                     </select>
                                     @error('kategori')

@@ -21,4 +21,9 @@ class Petani extends Model
     {
         return $this->hasMany(\App\Models\Garapan::class);
     }
+
+    public function users()
+    {
+        return $this->belongsTo(Users::class, 'user_id');
+    }
 }

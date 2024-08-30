@@ -14,10 +14,19 @@ class Users extends Model implements AuthenticatableContract
     protected $table = 'users';
 
     protected $fillable = [
-        'username', 'email', 'password', 'role',
+        'username',
+        'email',
+        'password',
+        'role',
     ];
 
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
+
+    public function petani()
+    {
+        return $this->hasOne(Petani::class, 'user_id'); // Assuming user_id is the foreign key in petani
+    }
 }
