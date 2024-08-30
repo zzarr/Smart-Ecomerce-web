@@ -7,7 +7,8 @@ use App\Http\Controllers\Petani\{
     DashboardPetaniController,
     AkunPetniController,
     PesananController,
-    KategoriController
+    KategoriController,
+    GarapanController,
 };
 use App\Http\Controllers\HomeController;
 
@@ -50,12 +51,18 @@ Route::group(['middleware' => ['role:petani']], function () {
 
         Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori');
         Route::get('/tambah_kategori', [KategoriController::class, 'add'])->name('add_kategori');
+        Route::post('/kategori/store', [KategoriController::class, 'store'])->name('store_kategori');
+        Route::get('/kategori/edit/{id}', [KategoriController::class, 'edit'])->name('edit_kategori');
+        Route::post('/kategori/update/{id}', [KategoriController::class, 'update'])->name('update_kategori');
+        Route::get('/kategori/delete/{id}', [KategoriController::class, 'destroy'])->name('delete_kategori');
 
+        Route::get('/garapan', [GarapanController::class, 'index'])->name('garapan');
+        Route::get('/garapan/add', [GarapanController::class, 'create'])->name('add_garapan');
+        Route::post('/garapan/store', [GarapanController::class, 'store'])->name('store_garapan');
 
         Route::get('/pesanan', [PesananController::class, 'index'])->name('pesanan');
     });
 });
-
 Route::group(['middleware' => ['role:konsumen']], function () {
     route::get('/dashboard_konsumen', [DashboardPetaniController::class, 'index'])->name('dashboard_konsumen');
 });

@@ -31,7 +31,8 @@
                 </li><!--//nav-item-->
                 <li class="nav-item">
                     <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-                    <a class="nav-link  {{ $webtitle === 'Garapan Tani' ? 'active' : '' }}" href="docs.html">
+                    <a class="nav-link  {{ $webtitle === 'Garapan Tani' ? 'active' : '' }}"
+                        href="{{ route('garapan') }}">
                         <span class="nav-icon">
                             <i class="ti ti-plant fs-4"></i>
 

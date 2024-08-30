@@ -16,7 +16,7 @@
                                 <div class="app-card-body">
                                     <div class="row">
                                         <div class="col-12">
-                                            <a href="{{ route('add_kategori') }}" class="btn btn-primary text-white"><i
+                                            <a href="{{ route('add_garapan') }}" class="btn btn-primary text-white"><i
                                                     class="ti ti-circle-plus"></i>Tambah
                                                 data</a>
                                         </div>
@@ -26,7 +26,12 @@
                                                     <thead>
                                                         <tr>
                                                             <th>No</th>
-                                                            <th>Kategori</th>
+                                                            <th>Nama Tanaman</th>
+                                                            <th>Deskripsi</th>
+                                                            <th>Harga/unit</th>
+                                                            <th>Tanggal Tanam</th>
+                                                            <th>Tanggal Panen</th>
+                                                            <th>Status</th>
                                                             <th class="text-right">Aksi</th>
                                                         </tr>
                                                     </thead>
@@ -35,11 +40,17 @@
                                                             $no = 1; // Initialize the counter before the loop
                                                         @endphp
 
-                                                        @foreach ($kategori as $item)
+                                                        @foreach ($garapan as $item)
                                                             <tr>
                                                                 <td style="width: 100px;">{{ $no }}</td>
                                                                 <!-- Display the current row number -->
-                                                                <td>{{ $item->nama_kategori }}</td>
+                                                                <td>{{ $item->nama_tanaman }}</td>
+                                                                <td>{{ $item->deskripsi }}</td>
+                                                                <td>{{ $item->harga_per_unit }}</td>
+                                                                <td>{{ $item->tanggal_tanam }}</td>
+                                                                <td>{{ $item->tanggal_panen }}</td>
+                                                                <td>{{ $item->status }}</td>
+
                                                                 <td class="text-right" style="width: 100px;">
                                                                     <div class="button-items">
                                                                         <a href="{{ route('delete_kategori', $item->id) }}"
