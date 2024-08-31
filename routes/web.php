@@ -28,12 +28,10 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::get('/home', function () {
-    return view('home',);
-});
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/home/produk', [HomeController::class, 'produk'])->name('produk');
-Route::get('/home/detail', [HomeController::class, 'detail_produk'])->name('detail_produk');
+Route::get('/home/detail/{id}', [HomeController::class, 'detail_produk'])->name('detail_produk');
 Route::get('/keranjang', function () {
     return view('keranjang');
 });

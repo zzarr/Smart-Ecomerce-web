@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Garapan;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        $garapan = Garapan::all();
+        return view('home', compact('garapan'));
     }
 
     public function produk()
@@ -15,8 +18,9 @@ class HomeController extends Controller
         return view('produk');
     }
 
-    public function detail_produk()
+    public function detail_produk($id)
     {
-        return view('detail-produk');
+        $garapan = Garapan::find($id);
+        return view('detail-produk', compact('garapan'));
     }
 }

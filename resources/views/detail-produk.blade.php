@@ -9,10 +9,10 @@
                         </li><!--end nav-item-->
                         <li class="breadcrumb-item"><a href="#">Haisil Tani</a>
                         </li><!--end nav-item-->
-                        <li class="breadcrumb-item active">Kentang</li>
+                        <li class="breadcrumb-item active">{{ $garapan->nama_tanaman }}</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Kentang</h4>
+                <h4 class="page-title">{{ $garapan->nama_tanaman }}</h4>
             </div><!--end page-title-box-->
         </div><!--end col-->
     </div>
@@ -22,20 +22,19 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6 align-self-center">
-                            <img src="{{ asset('images/HasilTani/Kentang.jpg') }}" alt="" class="mx-auto  d-block"
-                                height="300">
+                            <img src="{{ asset($garapan->photo) }}" alt="" class="mx-auto  d-block" height="300">
 
                         </div><!--end col-->
                         <div class="col-lg-6 align-self-center">
                             <div class="">
-                                <h5 class="font-24 mb-0">kentang</h5>
+                                <h5 class="font-24 mb-0">{{ $garapan->nama_tanaman }}</h5>
 
-                                <h6 class="font-20 fw-bold">Rp. 10.000,00/Kg</h6>
+                                <h6 class="font-20 fw-bold">Rp. {{ $garapan->harga_per_unit }}/Kg</h6>
                                 <h6 class="font-13">Detail :</h6>
-                                <p class="text-muted">kentang berkualitas
+                                <p class="text-muted">{{ $garapan->deskripsi }}
                                 </p>
-                                <h6 class="font-13">Tanggal Tanam :2024-1-20</h6>
-                                <h6 class="font-13">Perkiraan panen :2024-10-20</h6>
+                                <h6 class="font-13">Tanggal Tanam :{{ $garapan->tanggal_tanam }}</h6>
+                                <h6 class="font-13">Perkiraan panen :{{ $garapan->tanggal_panen }}</h6>
 
                                 <div class="mt-3">
                                     <input class="form-control form-control-sm d-inline-block" style="width:100px;"
