@@ -39,11 +39,11 @@
                         </div>
                         <div class="col">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Sayur
-                                </li>
-                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Buah</li>
-                                <li class="list-group-item"><i class="la la-angle-double-right text-info me-2"></i>Palwija
-                                </li>
+                                @foreach ($kategori as $item)
+                                    <li class="list-group-item"><i
+                                            class="la la-angle-double-right text-info me-2"></i>{{ $item->nama_kategori }}
+                                    </li>
+                                @endforeach
 
                             </ul>
                         </div>
@@ -54,93 +54,31 @@
         <div class="col-sm-9">
 
             <div class="row">
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="{{ asset('images/HasilTani/kentang.jpg') }}" alt=""
-                                class="d-block mx-auto my-4 img-fluid" height="150">
-                            <div class="d-flex justify-content-between align-items-center my-4">
-                                <div>
-                                    <p class="text-muted mb-2">Kentang</p>
-                                    <a href="#" class="header-title">Kentang</a>
-                                </div>
-                                <div>
-                                    <h4 class="text-dark mt-0 mb-2">Rp. 10.000,00</h4>
+                @foreach ($garapan as $hasilTani)
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="{{ asset($hasilTani->photo) }}" alt=""
+                                    class="d-block mx-auto my-4 img-fluid" height="150">
 
-                                </div>
-                            </div>
-                            <div class="d-grid">
-                                <button class="btn btn-de-primary">Add To Cart</button>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div><!--end col-->
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <!--end ribbon-->
-                            <img src="{{ asset('images/HasilTani/cabai.jpg') }}" alt=""
-                                class="d-block mx-auto my-4 img-fluid" height="150">
-                            <div class="d-flex justify-content-between align-items-center my-4">
-                                <div>
-                                    <p class="text-muted mb-2">Cabai</p>
-                                    <a href="#" class="header-title">Cabai</a>
-                                </div>
-                                <div>
-                                    <h4 class="text-dark mt-0 mb-2">Rp. 40.000,00</h4>
+                                <div class="d-flex justify-content-between align-items-center my-4">
+                                    <div>
+                                        <p class="text-muted mb-2">{{ $hasilTani->nama_tanaman }}</p>
+                                        <a href="{{ route('detail_produk', $hasilTani->id) }}"
+                                            class="header-title">{{ $hasilTani->nama_tanaman }}</a>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-dark mt-0 mb-2">Rp. {{ $hasilTani->harga_per_unit }}/Kg</h5>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="d-grid">
-                                <button class="btn btn-de-primary">Add To Cart</button>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div><!--end col-->
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <!--end ribbon-->
-                            <img src="{{ asset('images/HasilTani/wortel.jpg') }}" alt=""
-                                class="d-block mx-auto my-4 img-fluid" height="150">
-                            <div class="d-flex justify-content-between align-items-center my-4">
-                                <div>
-                                    <p class="text-muted mb-2">wortel</p>
-                                    <a href="#" class="header-title">Wortel</a>
+                                <div class="d-grid">
+                                    <button class="btn btn-de-primary">Add To Cart</button>
                                 </div>
-                                <div>
-                                    <h4 class="text-dark mt-0 mb-2">Rp. 22.000,00</h4>
-
-                                </div>
-                            </div>
-                            <div class="d-grid">
-                                <button class="btn btn-de-primary">Add To Cart</button>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div><!--end col-->
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <!--end ribbon-->
-                            <img src="{{ asset('images/HasilTani/jagung.jpg') }}" alt=""
-                                class="d-block mx-auto my-4 img-fluid" height="150">
-                            <div class="d-flex justify-content-between align-items-center my-4">
-                                <div>
-                                    <p class="text-muted mb-2">Jagung</p>
-                                    <a href="#" class="header-title">Jangung
-                                    </a>
-                                </div>
-                                <div>
-                                    <h4 class="text-dark mt-0 mb-2">Rp. 39.000,00 </h4>
-                                </div>
-                            </div>
-                            <div class="d-grid">
-                                <button class="btn btn-de-primary">Add To Cart</button>
-                            </div>
-                        </div><!--end card-body-->
-                    </div><!--end card-->
-                </div><!--end col-->
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div><!--end col-->
+                @endforeach
             </div>
 
         </div>

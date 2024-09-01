@@ -44,9 +44,15 @@
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="{{ route('dashboard_petani') }}">Dashboard</a>
+                                @if (Auth::user()->role == 'petani')
+                                    <a class="dropdown-item" href="{{ route('dashboard_petani') }}"> <i
+                                            class="fas fa-gauge font-16 me-1 align-text-bottom"></i>Dashboard</a>
+                                @elseif (Auth::user()->role == 'konsumen')
+                                    <a class="dropdown-item" href="{{ route('dashboard_konsumen') }}"><i
+                                            class="ti ti-gauge font-16 me-1 align-text-bottom"></i>Dashboard</a>
+                                @endif
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-address-book font-16 me-1 align-text-bottom"></i> Alamat Antar
+                                    <i class="far fa-address-book font-16 me-1 align-text-bottom"></i> Alamat Antar
                                 </a>
                                 <div class="dropdown-divider mb-0"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}"

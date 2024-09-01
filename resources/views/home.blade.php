@@ -6,7 +6,7 @@
                 <div class="col-lg-5 offset-lg-1 align-self-center">
                     <div class="p-5">
                         <!--<span class="bg-soft-pink p-2 rounded">Mannat Themes</span>-->
-                        <h1 class="my-4 font-weight-bold">Selamat datang <span class="text-success">Metrica</span>.
+                        <h1 class="my-4 font-weight-bold">Selamat datang <span class="text-primary">SHOPAN</span>.
                         </h1>
 
                         <button type="button" class="btn btn-de-primary">Get Started</button>
