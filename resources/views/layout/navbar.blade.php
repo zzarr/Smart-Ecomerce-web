@@ -1,4 +1,4 @@
-<header class="mb-0 border-bottom px-3 pt-3 pb-1">
+<header class="mb-0 border-bottom px-3 pt-3 pb-1 sticky-top bg-white">
     <div class="top-bar">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">

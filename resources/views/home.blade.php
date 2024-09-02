@@ -59,12 +59,20 @@
                                             class="header-title">{{ $hasilTani->nama_tanaman }}</a>
                                     </div>
                                     <div>
-                                        <h4 class="text-dark mt-0 mb-2">Rp. {{ $hasilTani->harga_per_unit }}</h4>
+                                        <h5 class="text-dark mt-0 mb-2">Rp. {{ $hasilTani->harga_per_unit }}</h5>
+                                        <h6>Perkiraan Tanggal
+                                            Panen</h6>
+                                        <h6 class="text-dark mt-0 mb-2">{{ $hasilTani->tanggal_panen }} </h6>
 
                                     </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button class="btn btn-de-primary">Add To Cart</button>
+                                    <form action="{{ route('add_keranjang') }}" method="post" class="d-grid">
+                                        @csrf
+                                        <input type="hidden" name="id_produk" value="{{ $hasilTani->id }}">
+                                        <button class="btn btn-de-primary" type="submit">Add To Cart</button>
+                                    </form>
+
                                 </div>
                             </div><!--end card-body-->
                         </div><!--end card-->

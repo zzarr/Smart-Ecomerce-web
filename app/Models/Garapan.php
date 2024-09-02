@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Petani;
 use App\Models\Kategori;
+use App\Models\Cart;
 
 class Garapan extends Model
 {
@@ -31,5 +32,10 @@ class Garapan extends Model
     public function kategori()
     {
         return $this->belongsTo(\App\Models\Kategori::class);
+    }
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class, 'id_garapan');
     }
 }

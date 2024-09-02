@@ -43,25 +43,27 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
-                                            <img src="{{ asset('images/HasilTani/kentang.jpg') }}" alt=""
-                                                height="40" class="me-2">
-                                            <p class="d-inline-block align-middle mb-0">
-                                                <a href=""
-                                                    class="d-inline-block align-middle mb-0 product-name">Kentang</a>
+                                        @foreach ($cart as $item)
+                                            <td>
+                                                <img src="{{ asset($item->photo) }}" alt="" height="40"
+                                                    class="me-2">
+                                                <p class="d-inline-block align-middle mb-0">
+                                                    <a href=""
+                                                        class="d-inline-block align-middle mb-0 product-name">{{ $item->nama_tanaman }}</a>
 
-                                            </p>
-                                        </td>
-                                        <td>Rp .10.000,00/Kg</td>
-                                        <td>
-                                            <input class="form-control w-25" type="number" value="1"
-                                                id="example-number-input1">
-                                        </td>
-                                        <td>Rp. 10.000,00</td>
-                                        <td>
-                                            <a href="" class="text-dark"><i
-                                                    class="mdi mdi-close-circle-outline font-18"></i></a>
-                                        </td>
+                                                </p>
+                                            </td>
+                                            <td>{{ $item->harga_per_unit }}/Kg</td>
+                                            <td>
+                                                <input class="form-control w-25" type="number" value="1"
+                                                    id="example-number-input1">
+                                            </td>
+                                            <td>Rp. 10.000,00</td>
+                                            <td>
+                                                <a href="" class="text-dark"><i
+                                                        class="mdi mdi-close-circle-outline font-18"></i></a>
+                                            </td>
+                                        @endforeach
                                     </tr>
 
                                 </tbody>

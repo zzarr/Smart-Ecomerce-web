@@ -10,6 +10,11 @@ use App\Http\Controllers\Petani\{
     KategoriController,
     GarapanController,
 };
+use App\Http\Controllers\Konsumen\{
+    DashboardKonsumenController,
+    AkunKonsumenController,
+    KeranjangController,
+};
 use App\Http\Controllers\HomeController;
 
 
@@ -32,9 +37,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/home/produk', [HomeController::class, 'produk'])->name('produk');
 Route::get('/home/detail/{id}', [HomeController::class, 'detail_produk'])->name('detail_produk');
-Route::get('/keranjang', function () {
-    return view('keranjang');
-});
+Route::get('/keranjang', [KeranjangController::class, 'index'])->middleware('auth')->name('keranjang');
+Route::post('/keranjang/add', [KeranjangController::class, 'store'])->middleware('auth')->name('add_keranjang');
 
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('proses', [LoginController::class, 'login'])->name('proses');
