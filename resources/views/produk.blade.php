@@ -73,6 +73,7 @@
                                     </div>
                                 </div>
                                 <div class="d-grid">
+
                                     <button class="btn btn-de-primary">Add To Cart</button>
                                 </div>
                             </div><!--end card-body-->
