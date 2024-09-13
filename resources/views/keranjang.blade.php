@@ -35,6 +35,7 @@
                                 <thead>
                                     <tr>
                                         <th>Product</th>
+                                        <th>Berat</th>
                                         <th>Price</th>
                                         <th>Quantity</th>
                                         <th>Total</th>
@@ -45,20 +46,23 @@
                                     <tr>
                                         @foreach ($cart as $item)
                                             <td>
-                                                <img src="{{ asset($item->photo) }}" alt="" height="40"
+                                                <img src="{{ asset($item->garapan->photo) }}" alt="" height="40"
                                                     class="me-2">
                                                 <p class="d-inline-block align-middle mb-0">
                                                     <a href=""
-                                                        class="d-inline-block align-middle mb-0 product-name">{{ $item->nama_tanaman }}</a>
+                                                        class="d-inline-block align-middle mb-0 product-name">{{ $item->garapan->nama_tanaman }}</a>
 
                                                 </p>
                                             </td>
-                                            <td>{{ $item->harga_per_unit }}/Kg</td>
                                             <td>
-                                                <input class="form-control w-25" type="number" value="1"
-                                                    id="example-number-input1">
+                                                <input class="form-control w-25" type="number"
+                                                    value="{{ $item->quantity }}" id="example-number-input1">
+
                                             </td>
+                                            <td>{{ $item->garapan->harga_per_unit }}/Kg</td>
+
                                             <td>Rp. 10.000,00</td>
+                                            <td></td>
                                             <td>
                                                 <a href="" class="text-dark"><i
                                                         class="mdi mdi-close-circle-outline font-18"></i></a>

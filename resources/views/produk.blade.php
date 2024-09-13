@@ -62,19 +62,23 @@
                                     class="d-block mx-auto my-4 img-fluid" height="150">
 
                                 <div class="d-flex justify-content-between align-items-center my-4">
-                                    <div>
+                                    <div class="row">
                                         <p class="text-muted mb-2">{{ $hasilTani->nama_tanaman }}</p>
                                         <a href="{{ route('detail_produk', $hasilTani->id) }}"
                                             class="header-title">{{ $hasilTani->nama_tanaman }}</a>
                                     </div>
-                                    <div>
-                                        <h5 class="text-dark mt-0 mb-2">Rp. {{ $hasilTani->harga_per_unit }}/Kg</h5>
+                                    <div class="row my-2">
+                                        <h5 class="text-dark mt-0 my-2">Rp. {{ $hasilTani->harga_per_unit }}/Kg</h5>
 
                                     </div>
                                 </div>
                                 <div class="d-grid">
+                                    <form action="{{ route('add_keranjang') }}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="id_garapan" value="{{ $hasilTani->id }}">
+                                        <button class="btn btn-de-primary">Add To Cart</button>
+                                    </form>
 
-                                    <button class="btn btn-de-primary">Add To Cart</button>
                                 </div>
                             </div><!--end card-body-->
                         </div><!--end card-->

@@ -69,7 +69,7 @@
                                 <div class="d-grid">
                                     <form action="{{ route('add_keranjang') }}" method="post" class="d-grid">
                                         @csrf
-                                        <input type="hidden" name="id_produk" value="{{ $hasilTani->id }}">
+                                        <input type="hidden" name="id_garapan" value="{{ $hasilTani->id }}">
                                         <button class="btn btn-de-primary" type="submit">Add To Cart</button>
                                     </form>
 

@@ -50,10 +50,11 @@
                                 @elseif (Auth::user()->role == 'konsumen')
                                     <a class="dropdown-item" href="{{ route('dashboard_konsumen') }}"><i
                                             class="ti ti-gauge font-16 me-1 align-text-bottom"></i>Dashboard</a>
+                                    <a class="dropdown-item" href="">
+                                        <i class="ti ti-shopping-cart font-16 me-1 align-text-bottom"></i>Keranjang
+                                    </a>
                                 @endif
-                                <a class="dropdown-item" href="#">
-                                    <i class="far fa-address-book font-16 me-1 align-text-bottom"></i> Alamat Antar
-                                </a>
+
                                 <div class="dropdown-divider mb-0"></div>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
