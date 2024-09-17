@@ -10,7 +10,7 @@ class KeranjangController extends Controller
 {
     public function index()
     {
-        $cart = Cart::with(['konsumen', 'garapan'])->where('id_konsumen', auth()->user()->id_konsumen)->get();
+        $cart = Cart::with(['konsumen', 'garapan'])->where('id_konsumen', auth()->user()->konsumen->id)->get();
         return view('keranjang', compact('cart'));
     }
 
@@ -21,7 +21,7 @@ class KeranjangController extends Controller
             $qty  = $request->qty;
         }
         $cart = Cart::create([
-            'id_konsumen' => auth()->user()->id_konsumen,
+            'id_konsumen' => auth()->user()->konsumen->id,
             'id_garapan' => $request->id_garapan,
             'quantity' => $qty,
         ]);

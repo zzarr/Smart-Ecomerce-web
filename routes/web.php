@@ -66,5 +66,5 @@ Route::group(['middleware' => ['role:petani']], function () {
     });
 });
 Route::group(['middleware' => ['role:konsumen']], function () {
-    route::get('/dashboard_konsumen', [DashboardPetaniController::class, 'index'])->name('dashboard_konsumen');
+    route::get('/dashboard_konsumen', [DashboardKonsumenController::class, 'index'])->name('dashboard_konsumen');
 });

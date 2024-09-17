@@ -11,7 +11,7 @@ class Konsumen extends Model
     use HasFactory;
     protected $table = 'konsumen';
     protected $fillable = [
-        'id_konsumen',
+        'user_id',
         'nama_konsumen',
         'email',
         'password',
@@ -21,5 +21,10 @@ class Konsumen extends Model
     public function cart()
     {
         return $this->hasMany(Cart::class, 'id_konsumen');
+    }
+
+    public function users()
+    {
+        return $this->belongsTo(Users::class, 'user_id');
     }
 }

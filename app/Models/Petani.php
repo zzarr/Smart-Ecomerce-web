@@ -10,6 +10,7 @@ class Petani extends Model
     use HasFactory;
     protected $table = 'petani';
     protected $fillable = [
+        'user_id',
         'username',
         'nama_petani',
         'alamat',

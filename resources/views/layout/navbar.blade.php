@@ -50,7 +50,7 @@
                                 @elseif (Auth::user()->role == 'konsumen')
                                     <a class="dropdown-item" href="{{ route('dashboard_konsumen') }}"><i
                                             class="ti ti-gauge font-16 me-1 align-text-bottom"></i>Dashboard</a>
-                                    <a class="dropdown-item" href="">
+                                    <a class="dropdown-item" href="{{ route('keranjang') }}">
                                         <i class="ti ti-shopping-cart font-16 me-1 align-text-bottom"></i>Keranjang
                                     </a>
                                 @endif

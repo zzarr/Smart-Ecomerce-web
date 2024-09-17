@@ -29,4 +29,8 @@ class Users extends Model implements AuthenticatableContract
     {
         return $this->hasOne(Petani::class, 'user_id'); // Assuming user_id is the foreign key in petani
     }
+
+    public function konsumen(){
+        return $this->hasOne(konsumen::class, 'user_id');
+    }
 }
